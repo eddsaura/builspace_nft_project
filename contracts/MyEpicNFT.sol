@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/utils/Strings.sol";
@@ -20,6 +21,8 @@ contract MyEpicNFT is ERC721URIStorage {
   string[] adjectives = ["joyous ", "scary ", "magical ", "grateful ", "ten ", "united ", "laughable ", "mean ", "abiding ", "discreet ", "cautious ", "light ", "ubiquitous ", "moaning ", "alert ", "inexpensive ", "frightened ", "four ", "skinny ", "jealous "];
   string[] nouns = ["reputation ", "cookie ", "dirt ", "quantity ", "math ", "client ", "manager ", "actor ", "poet ", "growth ", "judgment ", "membership ", "reception ", "movie ", "truth "];
   string[] philosophers = ["Jean d'Alembert", "Anaximander of Miletus", "Anaximenes of Miletus", "A.J. Ayer", "Edmund Burke", "Thomas Hobbes", "Gottfried Leibniz", "John Locke", "Niccolo Machiavelli", "Nicolas Malebranche", "Harriet Martineau", "Meng-zi (Mencius)", "Nicholas of Cusa", "Pythagoras of Samos", "P.F. Strawson"];
+
+  event NewEpicNFTMinted(address sender, uint256 tokenId);
 
   constructor() ERC721 ("PerritosNFT", "PERRO") {
     console.log("This is my NFT contract. Woah!");
@@ -45,6 +48,10 @@ contract MyEpicNFT is ERC721URIStorage {
 
   function random(string memory input) internal pure returns (uint256) {
       return uint256(keccak256(abi.encodePacked(input)));
+  }
+
+  function getTotalNFTsMinted() public view returns (uint256) {
+    return _tokenIds.current();
   }
 
 
@@ -94,6 +101,8 @@ contract MyEpicNFT is ERC721URIStorage {
   
     _tokenIds.increment();
     console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
+
+    emit NewEpicNFTMinted(msg.sender, newItemId);
   }
 }
 
