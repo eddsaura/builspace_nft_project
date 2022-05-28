@@ -6,6 +6,8 @@ I used hardhat, you can find this tutorial on https://buildspace.so . It is actu
 
 You can see my online (in testnet) contract in [here](https://rinkeby.etherscan.io/address/0x1a509030409fd7b4cafb5538007bf0d0bd583ed1)
 
+See the minted Tokens in [Rarible](https://rinkeby.rarible.com/collection/0x1a509030409fd7b4cafb5538007bf0d0bd583ed1/items)
+
 ---
 Run this with hardhat!
 ```
