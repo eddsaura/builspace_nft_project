@@ -4,9 +4,11 @@ Stop hating this thing, hate ppl who take advantage of the ignorance.
 
 I used hardhat, you can find this tutorial on https://buildspace.so . It is actually pretty interesting.
 
-You can see my online (in testnet) contract in [here](https://rinkeby.etherscan.io/address/0x1a509030409fd7b4cafb5538007bf0d0bd583ed1)
+You can see my online (in testnet) contract in [here](https://rinkeby.etherscan.io/address/0x78b14e244206ec2407dc565bfb5316db09c70a61)
 
-See the minted Tokens in [Rarible](https://rinkeby.rarible.com/collection/0x1a509030409fd7b4cafb5538007bf0d0bd583ed1/items)
+See the minted Tokens in [Rarible](https://rinkeby.rarible.com/collection/0x78b14e244206ec2407dc565bfb5316db09c70a61/items)
+
+See the frontend client in [Replit](https://replit.com/@eddsaura/nft-starter-project)!
 
 ---
 Run this with hardhat!
